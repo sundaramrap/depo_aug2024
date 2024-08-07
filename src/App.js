@@ -1,8 +1,10 @@
-import FCone from "./FCOne";
+// import FCone from "./FCOne";
+import Counter from "./ExCounter";
 function App() {
   return (
     <div className="App">
-      <FCone />
+      {/* <FCone /> */}
+      <Counter />
     </div>
   );
 }
