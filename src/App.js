@@ -1,10 +1,12 @@
 // import FCone from "./FCOne";
-import Counter from "./ExCounter";
+// import Counter from "./ExCounter";
+import Lifecycle from "./LifeCycle";
 function App() {
   return (
     <div className="App">
       {/* <FCone /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <Lifecycle />
     </div>
   );
 }
