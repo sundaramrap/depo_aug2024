@@ -1,8 +1,9 @@
 // import FCone from "./FCOne";
 // import Counter from "./ExCounter";
 // import Lifecycle from "./LifeCycle";
-import FCJson from "./Aug8/FCJson";
-import RefUse from "./Aug9/RefUse";
+// import FCJson from "./Aug8/FCJson";
+// import RefUse from "./Aug9/RefUse";
+import DeBouncing from "./Aug9/DeBouncing";
 function App() {
   return (
     <div className="App">
@@ -10,7 +11,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Lifecycle /> */}
       {/* <FCJson /> */}
-      <RefUse />
+      {/* <RefUse /> */}
+      <DeBouncing />
     </div>
   );
 }
