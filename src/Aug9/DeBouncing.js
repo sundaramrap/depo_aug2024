@@ -3,7 +3,13 @@ import React, { useState } from "react";
 // implementing debouncing from the scratch
 
 const deBounce = (fn, delay) => {
-  return function () {};
+  let timerId;
+  return function (args) {
+    if (timerId) {
+      clearTimeout(timerId);
+    }
+    timerId = setTimeout(() => fn(...args), delay);
+  };
 };
 
 const DeBouncing = () => {
