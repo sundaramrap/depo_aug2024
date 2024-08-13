@@ -4,9 +4,11 @@ import Button from "./Button";
 export default function UserDashBoard() {
   const [userData, setUserData] = useState(null);
 
-  const handleUserData = async () => {
+  const handleUserData = async (id) => {
     try {
-      const response = await fetch("");
+      const response = await fetch(`https://reqres.in/api/users/${id}`);
+      const data = await response.json();
+      setUserData(data.data);
     } catch (error) {
       console.log("Error in fetchinf the data ::", error);
     }
@@ -16,17 +18,20 @@ export default function UserDashBoard() {
     <>
       <h1>User Dash Board</h1>
       <div>
-        <Button />
-        <Button />
-        <Button />
-        <Button />
+        <Button onClick={() => handleUserData(1)} lable="1" />
+        <Button onClick={() => handleUserData(2)} lable="2" />
+        <Button onClick={() => handleUserData(3)} lable="3" />
+        <Button onClick={() => handleUserData(4)} lable="100" />
       </div>
-
-      <div>
-        <p>Name :</p>
-        <p>Email :</p>
-        <img />
-      </div>
+      {userData && (
+        <div>
+          <p>
+            Name :{userData.first_name} {userData.last_name}
+          </p>
+          <p>Email :{userData.email}</p>
+          <img src={userData.avatar} alt={userData.first_name} />
+        </div>
+      )}
     </>
   );
 }
