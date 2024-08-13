@@ -1,30 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 
-export default function UserDash() {
+export default function UserDashBoard() {
+  const [userData, setUserData] = useState(null);
+
+  const handleUserData = async () => {
+    try {
+      const response = await fetch("");
+    } catch (error) {
+      console.log("Error in fetchinf the data ::", error);
+    }
+  };
+
   return (
     <>
-      <form>
+      <h1>User Dash Board</h1>
+      <div>
         <Button />
         <Button />
         <Button />
         <Button />
-        <br />
-        <br />
+      </div>
 
-        <label>Email :</label>
-        <br />
-        <br />
-        <label>Name :</label>
-
-        <br />
-        <br />
-        <br />
-        <img
-          src="https://pdtxar.com/wp-content/uploads/2019/04/person-placeholder.jpg"
-          alt="userPlaceholer"
-        />
-      </form>
+      <div>
+        <p>Name :</p>
+        <p>Email :</p>
+        <img />
+      </div>
     </>
   );
 }
