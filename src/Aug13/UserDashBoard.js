@@ -10,7 +10,7 @@ export default function UserDashBoard() {
       const data = await response.json();
       setUserData(data.data);
     } catch (error) {
-      console.log("Error in fetchinf the data ::", error);
+      console("Error in fetchinf the data ::", error);
     }
   };
 

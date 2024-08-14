@@ -4,7 +4,8 @@
 // import FCJson from "./Aug8/FCJson";
 // import RefUse from "./Aug9/RefUse";
 // import DeBouncing from "./Aug9/
-import UserDash from "./Aug13/UserDashBoard";
+// import UserDash from "./Aug13/UserDashBoard";
+import DogPic from "./Aug14/DogPic";
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,8 @@ function App() {
       {/* <FCJson /> */}
       {/* <RefUse /> */}
       {/* <DeBouncing /> */}
-      <UserDash />
+      {/* <UserDash /> */}
+      <DogPic />
     </div>
   );
 }
