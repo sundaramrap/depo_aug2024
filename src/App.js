@@ -6,7 +6,8 @@
 // import DeBouncing from "./Aug9/
 // import UserDash from "./Aug13/UserDashBoard";
 import DogPic from "./Aug14/DogPic";
-import StopWatch from "./Aug15/StopWatch";
+// import StopWatch from "./Aug15/StopWatch";
+import Temp from "./Aug15/StopWatch";
 function App() {
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
       {/* <UserDash /> */}
       <DogPic />
       <br />
-      <StopWatch />
+      <Temp />
     </div>
   );
 }
