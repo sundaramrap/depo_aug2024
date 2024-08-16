@@ -1,0 +1,85 @@
+import React, { useState, useEffect } from "react";
+
+// Function to fetch a random dog image
+const fetchRandomDogImage = async () => {
+  try {
+    const response = await fetch("https://dog.ceo/api/breeds/image/random");
+    const data = await response.json();
+    return data.message;
+  } catch (error) {
+    console.error("Error fetching dog image:", error);
+  }
+};
+
+// Function to fetch a specific breed dog image
+const fetchBreedDogImage = async (breed) => {
+  try {
+    const response = await fetch(
+      `https://dog.ceo/api/breed/${breed}/images/random`
+    );
+    const data = await response.json();
+    return data.message;
+  } catch (error) {
+    console.error("Error fetching breed dog image:", error);
+  }
+};
+
+const App = () => {
+  const [selectedBreed, setSelectedBreed] = useState("Random");
+  const [dogImage, setDogImage] = useState("");
+
+  // Effect to fetch the dog image based on selected breed
+  useEffect(() => {
+    const fetchImage = async () => {
+      if (selectedBreed === "Random") {
+        const image = await fetchRandomDogImage();
+        setDogImage(image);
+      } else {
+        const image = await fetchBreedDogImage(selectedBreed.toLowerCase());
+        setDogImage(image);
+      }
+    };
+
+    fetchImage();
+  }, [selectedBreed]);
+
+  // Handler for the "Next" button
+  const handleNextClick = async () => {
+    if (selectedBreed === "Random") {
+      const image = await fetchRandomDogImage();
+      setDogImage(image);
+    } else {
+      const image = await fetchBreedDogImage(selectedBreed.toLowerCase());
+      setDogImage(image);
+    }
+  };
+
+  return (
+    <div style={{ textAlign: "center", padding: "20px" }}>
+      <h1>Dog Image Display</h1>
+      <select
+        value={selectedBreed}
+        onChange={(e) => setSelectedBreed(e.target.value)}
+        style={{ marginBottom: "10px" }}
+      >
+        <option value="Random">Random</option>
+        <option value="beagle">Beagle</option>
+        <option value="boxer">Boxer</option>
+        <option value="dalmatian">Dalmatian</option>
+        <option value="husky">Husky</option>
+      </select>
+      <br />
+      <img
+        src={dogImage}
+        alt="Dog"
+        style={{ width: "300px", height: "auto", marginTop: "10px" }}
+      />
+      <br />
+      <button onClick={handleNextClick} style={{ marginTop: "10px" }}>
+        Next
+      </button>
+    </div>
+  );
+};
+
+export default App;
