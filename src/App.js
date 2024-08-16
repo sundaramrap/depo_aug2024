@@ -9,6 +9,7 @@
 // import StopWatch from "./Aug15/StopWatch";
 // import Temp from "./Aug15/StopWatch";
 // import DogPic from "./Aug14/DogPicAxios";
+import AppointmentBooking from "./Aug16/AppointmentBokking";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
       {/* <DogPic /> */}
       {/* <br />
       <Temp /> */}
+      <AppointmentBooking />
     </div>
   );
 }
