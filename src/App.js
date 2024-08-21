@@ -10,6 +10,8 @@
 // import Temp from "./Aug15/StopWatch";
 // import DogPic from "./Aug14/DogPicAxios";
 import AppointmentBooking from "./Aug16/AppointmentBokking";
+import When from "./Aug16/When";
+
 function App() {
   return (
     <div className="App">
