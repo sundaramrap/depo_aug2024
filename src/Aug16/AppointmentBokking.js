@@ -27,7 +27,7 @@ export default function AppointmentBooking() {
     <div>
       <h1>Book a session</h1>
       <p>Fill in the form below to book a virtual session with your doctor</p>
-      <form>
+      <form action="http://www.foo.com" method="POST">
         <label>
           <strong>Basic Info</strong>
         </label>
