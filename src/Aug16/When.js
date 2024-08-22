@@ -27,7 +27,7 @@ export default function When() {
         <div className="date-time-container">
           <label>
             Date:
-            <input type="date&Time" />
+            <input type="date" />
           </label>
           <br />
           <label>
