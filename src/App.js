@@ -9,25 +9,28 @@
 // import StopWatch from "./Aug15/StopWatch";
 // import Temp from "./Aug15/StopWatch";
 // import DogPic from "./Aug14/DogPicAxios";
-import AppointmentBooking from "./Aug16/AppointmentBokking";
-import Pic from "./Aug21/Pic";
+import { BrowserRouter } from "react-router-dom";
+// import AppointmentBooking from "./Aug16/AppointmentBokking";
+import Home from "./Aug21/Home";
 
 function App() {
   return (
-    <div className="App">
-      {/* <FCone /> */}
-      {/* <Counter /> */}
-      {/* <Lifecycle /> */}
-      {/* <FCJson /> */}
-      {/* <RefUse /> */}
-      {/* <DeBouncing /> */}
-      {/* <UserDash /> */}
-      {/* <DogPic /> */}
-      {/* <br />
+    <BrowserRouter>
+      <div className="App">
+        {/* <FCone /> */}
+        {/* <Counter /> */}
+        {/* <Lifecycle /> */}
+        {/* <FCJson /> */}
+        {/* <RefUse /> */}
+        {/* <DeBouncing /> */}
+        {/* <UserDash /> */}
+        {/* <DogPic /> */}
+        {/* <br />
       <Temp /> */}
-      <AppointmentBooking />
-      <Pic />
-    </div>
+        {/* <AppointmentBooking /> */}
+        <Home />
+      </div>
+    </BrowserRouter>
   );
 }
 
